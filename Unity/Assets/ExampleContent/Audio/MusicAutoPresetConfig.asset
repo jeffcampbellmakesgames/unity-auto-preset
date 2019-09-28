@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58dc361311687f54ea131462f58babd8, type: 3}
   m_Name: MusicAutoPresetConfig
   m_EditorClassIdentifier: 
-  _preset: {fileID: 0}
+  _preset: {fileID: 2655988077585873504, guid: fda9f72576bd4bd4bbc7979ef4f6160d, type: 2}
