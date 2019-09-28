@@ -6,6 +6,21 @@ Auto Preset enables scriptable configuration of assets from the Unity Editor wit
 ## Overview
 AutoPresetConfig is a simple Scriptable Object derived class that holds a reference to a native Unity Preset asset; these assets can be created from any native Unity asset or component, containing the serialized settings of that asset in a dedicated Scriptable Object. Any asset imported in the same folder as a AutoPresetConfig asset(s) will check to see if any of them apply to that type of asset. If they do, the first applicable AutoPresetConfig asset found will automatically be applied to that newly imported asset.
 
+## Importing AutoPresets
+Using this library in your project can be done in two ways:
+* **Releases:** The latest release can be found [here](https://github.com/jeffcampbellmakesgames/unity-auto-preset/releases) as a UnityPackage file that can be downloaded and imported directly into your project's Assets folder.
+* **Package:** Using the native Unity Package Manager, you can add this library as a package by modifying your `manifest.json` file found at `/ProjectName/Packages/manifest.json` to include it as a dependency. See the example below on how to reference it.
+
+```
+{
+	"dependencies": {
+		...
+		"com.jeffcampbellmakesgames.autopresets": "https://github.com/jeffcampbellmakesgames/unity-auto-preset.git#release/stable",
+		...
+	}
+}
+``` 
+
 ## Use-Cases and Usage
 This type of automatic, scriptable configuration of assets can be used to reduce the boilerplate, often tedious work of configuring newly imported assets and can prevent errors from doing so manually. 
 
