@@ -15,15 +15,15 @@ Instead, follow these steps to have those settings applied automatically every t
 
 * Configure one texture using the proper settings and save those settings as a preset by clicking the dial icon at the top right of its inspector. This allows you to save those settings as a preset.
 
-![Preset Button on Inspector](https://github.com/jeffcampbellmakesgames/unity-auto-preset/blob/master/PresetButtonOnInspector.png)
+![Preset Button on Inspector](https://github.com/jeffcampbellmakesgames/unity-auto-preset/blob/master/Images/PresetButtonOnInspector.png)
 
 * Create a AutoPresetConfig asset in that folder by right-clicking on the folder in the project view and selecting `Create=>JCMG=>AutoPreset=>AutoPresetConfig` and give it an appropriate name.
 
-![Preset Button on Inspector](https://github.com/jeffcampbellmakesgames/unity-auto-preset/blob/master/AutoPresetConfigCreateMenu.png)
+![Preset Button on Inspector](https://github.com/jeffcampbellmakesgames/unity-auto-preset/blob/master/Images/AutoPresetConfigCreateMenu.png)
 
 * Assign that newly created Preset asset to the AutoPresetConfig in its inspector.
 
-![Preset Button on Inspector](https://github.com/jeffcampbellmakesgames/unity-auto-preset/blob/master/AutoPresetConfigInspector.png)
+![Preset Button on Inspector](https://github.com/jeffcampbellmakesgames/unity-auto-preset/blob/master/Images/AutoPresetConfigInspector.png)
 
 Using this workflow, you can automatically configure textures when imported or any of the other supported asset types below:
 
