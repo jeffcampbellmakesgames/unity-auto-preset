@@ -2,4 +2,5 @@
 	<s:String x:Key="/Default/CodeInspection/CSharpLanguageProject/LanguageLevel/@EntryValue">CSharp70</s:String>
 	<s:Boolean x:Key="/Default/CodeInspection/NamespaceProvider/NamespaceFoldersToSkip/=assets_005Cjcmg_005Cautopresets_005Cscripts/@EntryIndexedValue">True</s:Boolean>
 	<s:Boolean x:Key="/Default/CodeInspection/NamespaceProvider/NamespaceFoldersToSkip/=assets_005Cjcmg_005Cautopresets_005Cscripts_005Ceditor_005Cassetprocessors/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/CodeInspection/NamespaceProvider/NamespaceFoldersToSkip/=assets_005Cjcmg_005Cautopresets_005Cscripts_005Ceditor_005Cinspectors/@EntryIndexedValue">True</s:Boolean>
 	<s:Boolean x:Key="/Default/CodeInspection/NamespaceProvider/NamespaceFoldersToSkip/=assets_005Cjcmg_005Cautopresets_005Cscripts_005Ceditor_005Ctools/@EntryIndexedValue">True</s:Boolean></wpf:ResourceDictionary>

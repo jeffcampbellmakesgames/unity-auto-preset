@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using UnityEditor;
@@ -10,8 +11,10 @@ namespace JCMG.AutoPresets.Editor
 	{
 		private static readonly StringBuilder SB = new StringBuilder();
 
-		public const string UNITY_ASSETS_FOLDER_NAME = "Assets";
-		public const string FORWARD_SLASH_STR = "/";
+		private const string WILDCARD_SEARCH = "*";
+		private const string META_FILE_EXTENSION = ".meta";
+		private const string UNITY_ASSETS_FOLDER_NAME = "Assets";
+		private const string FORWARD_SLASH_STR = "/";
 		private const char FORWARD_SLASH_CHAR = '/';
 
 		/// <summary>
@@ -75,6 +78,30 @@ namespace JCMG.AutoPresets.Editor
 		public static string GetProjectPath()
 		{
 			return Application.dataPath.Substring(0, Application.dataPath.Length - 6);
+		}
+
+		/// <summary>
+		/// Reimports all assetsb at <paramref name="path"/> where the preset in <paramref name="applicableConfig"/> applies.
+		/// </summary>
+		/// <param name="path"></param>
+		/// <param name="applicableConfig"></param>
+		public static void ReimportAllAssets(string path, AutoPresetConfig applicableConfig)
+		{
+			var projectPath = GetProjectPath();
+			var fullPath = Path.Combine(projectPath, path);
+
+			var assetPaths = Directory.GetFiles(fullPath, WILDCARD_SEARCH, SearchOption.TopDirectoryOnly)
+				.Where(x => !x.EndsWith(META_FILE_EXTENSION))
+				.Select(y => y.Replace(projectPath, string.Empty));
+
+			foreach (var assetPath in assetPaths)
+			{
+				var assetImporter = AssetImporter.GetAtPath(assetPath);
+				if (assetImporter != null && applicableConfig.CanBeAppliedTo(assetImporter))
+				{
+					AssetDatabase.ImportAsset(assetPath);
+				}
+			}
 		}
 	}
 }
