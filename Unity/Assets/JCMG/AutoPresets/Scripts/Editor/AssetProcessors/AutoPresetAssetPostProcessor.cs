@@ -104,11 +104,8 @@ namespace JCMG.AutoPresets.Editor
 		{
 			autoPreset = null;
 
-			const string AUTO_PRESET_SEARCH = "t:AutoPresetConfig";
-
 			var parentFolder = AssetDatabaseTools.GetAssetParentFolderPath(assetPath);
-			var assetGUIDs = AssetDatabase.FindAssets(AUTO_PRESET_SEARCH, new[] { parentFolder });
-			var autoPresetConfigs = AssetDatabaseTools.LoadAllAssets<AutoPresetConfig>(assetGUIDs);
+			var autoPresetConfigs = AssetDatabaseTools.GetAllAutoPresetConfigs(new[] { parentFolder });
 
 			foreach (var autoPresetConfig in autoPresetConfigs)
 			{
