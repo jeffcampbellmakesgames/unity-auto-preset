@@ -35,7 +35,8 @@ namespace JCMG.AutoPresets.Editor
 		}
 
 		/// <summary>
-		/// Returns true if <seealso cref="Preset"/> is assigned and it can be applied to <paramref name="obj"/>.
+		/// Returns true if <seealso cref="Preset"/> is assigned, it can be applied to <paramref name="obj"/>, and the
+		/// preseT has been applied to <paramref name="obj"/>.
 		/// </summary>
 		/// <param name="obj"></param>
 		/// <returns></returns>
