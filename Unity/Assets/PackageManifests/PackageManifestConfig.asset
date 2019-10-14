@@ -16,6 +16,7 @@ MonoBehaviour:
   - Assets/JCMG/AutoPresets
   packageIgnorePaths: []
   packageDestinationPath: ../../unity-auto-preset-release
+  legacyPackageDestinationPath: ../Builds
   packageName: com.jeffcampbellmakesgames.autopresets
   displayName: JCMG AutoPresets
   packageVersion: 1.0.1
