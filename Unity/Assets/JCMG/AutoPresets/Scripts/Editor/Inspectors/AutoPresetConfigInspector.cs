@@ -7,7 +7,7 @@ namespace JCMG.AutoPresets.Editor
     internal sealed class AutoPresetConfigInspector : UnityEditor.Editor
     {
         private const string ACTIONS_TITLE_TEXT = "Actions";
-        private const string REIMPORT_BUTTON_TEXT = "Reimport";
+        private const string REIMPORT_BUTTON_TEXT = "Reimport linked assets";
 
         public override void OnInspectorGUI()
         {
