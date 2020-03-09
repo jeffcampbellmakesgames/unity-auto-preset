@@ -19,7 +19,7 @@ MonoBehaviour:
   legacyPackageDestinationPath: ../Builds
   packageName: com.jeffcampbellmakesgames.autopresets
   displayName: JCMG AutoPresets
-  packageVersion: 1.0.1
+  packageVersion: 1.0.2
   unityVersion: 2018.3
   description: Auto Preset enables scriptable configuration of assets from the Unity
     Editor without requiring any additional code.
