@@ -1,3 +1,7 @@
+<a href="https://openupm.com/packages/com.jeffcampbellmakesgames.autopresets/"><img src="https://img.shields.io/npm/v/com.jeffcampbellmakesgames.autopresets?label=openupm&amp;registry_uri=https://package.openupm.com" /></a>
+<img alt="GitHub issues" src="https://img.shields.io/github/issues/jeffcampbellmakesgames/unity-auto-preset">
+<img alt="GitHub" src="https://img.shields.io/github/license/jeffcampbellmakesgames/unity-auto-preset">
+
 # Auto Preset
 
 ## About
@@ -6,20 +10,31 @@ Auto Preset enables scriptable configuration of assets from the Unity Editor wit
 ## Overview
 `AutoPresetConfig` is a simple Scriptable Object derived class that holds a reference to a native Unity `Preset` asset; these assets can be created from any native Unity asset or component, containing the serialized settings of that asset in a dedicated Scriptable Object. Any asset imported in the same folder as a `AutoPresetConfig` asset(s) will check to see if any of them apply to that type of asset. If they do, the first applicable `AutoPresetConfig` asset found will automatically be applied to that newly imported asset.
 
-## Importing AutoPresets
-Using this library in your project can be done in two ways:
-* **Releases:** The latest release can be found [here](https://github.com/jeffcampbellmakesgames/unity-auto-preset/releases) as a UnityPackage file that can be downloaded and imported directly into your project's Assets folder.
-* **Package:** Using the native Unity Package Manager, you can add this library as a package by modifying your `manifest.json` file found at `/ProjectName/Packages/manifest.json` to include it as a dependency. See the example below on how to reference it.
+## Installing AutoPresets
+Using this library in your project can be done in three ways:
+
+### Install via OpenUPM
+The package is available on the [openupm registry](https://openupm.com/). It's recommended to install it via [openupm-cli](https://github.com/openupm/openupm-cli).
+
+```
+openupm add com.jeffcampbellmakesgames.autopresets
+```
+
+### Install via GIT URL
+Using the native Unity Package Manager introduced in 2017.2, you can add this library as a package by modifying your `manifest.json` file found at `/ProjectName/Packages/manifest.json` to include it as a dependency. See the example below on how to reference it.
 
 ```
 {
 	"dependencies": {
 		...
-		"com.jeffcampbellmakesgames.autopresets": "https://github.com/jeffcampbellmakesgames/unity-auto-preset.git#release/stable",
+		"com.jeffcampbellmakesgames.autopresets" : "https://github.com/jeffcampbellmakesgames/unity-auto-preset.git#release/stable",
 		...
 	}
 }
-``` 
+```
+
+### Install via classic `.UnityPackage`
+The latest release can be found [here](https://github.com/jeffcampbellmakesgames/nodey/releases) as a UnityPackage file that can be downloaded and imported directly into your project's Assets folder.
 
 ## Use-Cases and Usage
 This type of automatic, scriptable configuration of assets can be used to reduce the boilerplate, often tedious work of configuring newly imported assets and can prevent errors from doing so manually. 
@@ -32,15 +47,15 @@ Instead, follow these steps to have those settings applied automatically every t
 
 * Configure one texture using the proper settings and save those settings as a `Preset` by clicking the dial icon at the top right of its inspector. This allows you to save those settings as a `Preset`.
 
-![Preset Button on Inspector](https://github.com/jeffcampbellmakesgames/unity-auto-preset/blob/master/Images/PresetButtonOnInspector.png)
+![Preset Button on Inspector](https://github.com/jeffcampbellmakesgames/unity-auto-preset/blob/develop/Images/PresetButtonOnInspector.png)
 
 * Create a `AutoPresetConfig` asset in that folder by right-clicking on the folder in the project view and selecting `Create=>JCMG=>AutoPreset=>AutoPresetConfig` and give it an appropriate name.
 
-![Preset Button on Inspector](https://github.com/jeffcampbellmakesgames/unity-auto-preset/blob/master/Images/AutoPresetConfigCreateMenu.png)
+![Preset Button on Inspector](https://github.com/jeffcampbellmakesgames/unity-auto-preset/blob/develop/Images/AutoPresetConfigCreateMenu.png)
 
 * Assign that newly created `Preset` asset to the `AutoPresetConfig` in its inspector.
 
-![Preset Button on Inspector](https://github.com/jeffcampbellmakesgames/unity-auto-preset/blob/master/Images/AutoPresetConfigInspector.png)
+![Preset Button on Inspector](https://github.com/jeffcampbellmakesgames/unity-auto-preset/blob/develop/Images/AutoPresetConfigInspector.png)
 
 ### Manually Triggering Asset Updates
 It may be convenient at times to update a `Preset` and apply any changes made to any assets that would be affected by it manually. There are two ways to do this:
