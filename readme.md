@@ -1,6 +1,7 @@
 <a href="https://openupm.com/packages/com.jeffcampbellmakesgames.autopresets/"><img src="https://img.shields.io/npm/v/com.jeffcampbellmakesgames.autopresets?label=openupm&amp;registry_uri=https://package.openupm.com" /></a>
 <img alt="GitHub issues" src="https://img.shields.io/github/issues/jeffcampbellmakesgames/unity-auto-preset">
 <img alt="GitHub" src="https://img.shields.io/github/license/jeffcampbellmakesgames/unity-auto-preset">
+[![Twitter Follow](https://img.shields.io/badge/twitter-%40stampyturtle-blue.svg?style=flat&label=Follow)](https://twitter.com/stampyturtle)
 
 # Auto Preset
 
